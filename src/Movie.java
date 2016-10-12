@@ -35,13 +35,12 @@ private int rating;
 
 	//Makes a string of the movie object
 	public String toString() {
-	String temp;
-	temp = "Movie name: " + name + "\n" + "Cast \n";
-	//int displaynum;
-	temp = makeCastListIntoString(temp);
-	temp = temp + "Genre: " + genre + "\n";
-	temp = temp + "Rating: " + rating;
-	return temp;
+		String temp;
+		temp = "Movie name: " + name + "\n" + "Cast \n";
+		temp = makeCastListIntoString(temp);
+		temp = temp + "Genre: " + genre + "\n";
+		temp = temp + "Rating: " + rating;
+		return temp;
 	}
 	private String makeCastListIntoString(String temp) {
 		for (int i=0; i <=(cast.length-1); i++) {

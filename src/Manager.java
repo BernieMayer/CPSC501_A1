@@ -27,8 +27,8 @@ private final int MATCH = 0;
 	*/
 	public Movie makeMovie() {
 		//Code to make and check the movie object items
-		System.out.print("Enter the name of the movie: ");
-   String name = in.nextLine();
+	System.out.print("Enter the name of the movie: ");
+	String name = in.nextLine();
 	System.out.print("Enter the number of Cast Members: ");
 	int index = Integer.parseInt(in.nextLine());
 	String[] cast = new String[index];
@@ -74,6 +74,7 @@ private final int MATCH = 0;
 		previous.setNext(newNode);//places node at the end
 	}
 	}
+
 	/*
 	Function is designed to display the linked list in order
 	*/
@@ -96,7 +97,7 @@ private final int MATCH = 0;
 	if (index == 4) {
 	String trash = in.nextLine();
 	index = 1;
-	}
+		}
 	}
 	}
 	/*
@@ -245,7 +246,7 @@ private final int MATCH = 0;
 	*/
 
 	
-	private String checkGenre(String genre) {
+	public String checkGenre(String genre) {
 	Boolean flag = true;
 	do {
 		
@@ -253,28 +254,40 @@ private final int MATCH = 0;
 	Compare the genre to the genres allowed.
 	Allowed genres: action, drama, science fiction, comedy, horror, martial arts or 'other
 	*/
-	if (genre.compareToIgnoreCase("action") == MATCH) {
-	return genre;
-	} else if (genre.compareToIgnoreCase("drama") == MATCH) {
-	return genre;
-	} else if (genre.compareToIgnoreCase("science fiction") == MATCH) {
-	return genre;
-	} else if (genre.compareToIgnoreCase("comedy") == MATCH) {
-	return genre;
-	} else if (genre.compareToIgnoreCase("horror") == MATCH){
-	return genre;
-	} else if (genre.compareToIgnoreCase("") == MATCH) {
-	return "No Genre";
-	} else if (genre.compareToIgnoreCase("martial arts")==MATCH || genre.compareToIgnoreCase("Other")==MATCH) {
-		return genre;	
+		
+	if (genre.compareToIgnoreCase("") == MATCH) {
+			return "No Genre";
 	}
-	else {
+	
+	if (!validGenre(genre) ) {
 	System.out.print("Invalid entry for genre, Enter a new value.");
 	genre = in.nextLine();
 	}
 	} while(flag);
 	return genre;
 	}
+	
+	private boolean validGenre(String genre)
+	{
+		if (genre.compareToIgnoreCase("action") == MATCH) {
+			return true;
+			} else if (genre.compareToIgnoreCase("drama") == MATCH) {
+			return true;
+			} else if (genre.compareToIgnoreCase("science fiction") == MATCH) {
+			return true;
+			} else if (genre.compareToIgnoreCase("comedy") == MATCH) {
+			return true;
+			} else if (genre.compareToIgnoreCase("horror") == MATCH){
+			return true;
+			} else if (genre.compareToIgnoreCase("martial arts")==MATCH || genre.compareToIgnoreCase("Other")==MATCH) {
+				return true;	
+			}
+		else {
+			return false;
+		}
+	}
+	
+	
 	
 	/*
 	Displays the linked list backwards by calling a function
