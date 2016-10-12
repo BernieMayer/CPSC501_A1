@@ -9,8 +9,8 @@ Main starting point.
 public class Driver {
 	//UserInterface aUserInterface
 	public static void main(String[] args) {
-	UserInterface aUserInterface = new UserInterface();
+	Manager manager = new Manager();
 	System.out.println("This program is designed to give users a way to make a list of movies");
-	aUserInterface.start();
+	manager.start();
 	}
 }

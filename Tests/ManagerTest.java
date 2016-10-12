@@ -18,5 +18,6 @@ public class ManagerTest {
 		assertEquals(m.checkGenre("drama") , "drama");
 		assertEquals(m.checkGenre("comedy"),"comedy");
 		assertEquals(m.checkGenre(""), "No Genre");
+		assertEquals(m.checkGenre("Other"), "Other");
 	}
 }
