@@ -38,12 +38,18 @@ private int rating;
 	String temp;
 	temp = "Movie name: " + name + "\n" + "Cast \n";
 	//int displaynum;
-	for (int i=0; i <=(cast.length-1); i++) {
-	//displaynum = i+1;
-	temp = temp  + (String)cast[i] + "\n";
-	}
+	temp = makeCastListIntoString(temp);
 	temp = temp + "Genre: " + genre + "\n";
 	temp = temp + "Rating: " + rating;
 	return temp;
 	}
+	private String makeCastListIntoString(String temp) {
+		for (int i=0; i <=(cast.length-1); i++) {
+		//displaynum = i+1;
+		temp = temp  + (String)cast[i] + "\n";
+		}
+		return temp;
+	}
+	
+	
 }
