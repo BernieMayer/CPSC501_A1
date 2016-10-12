@@ -11,6 +11,9 @@ remove a selected item and check genre/rating for validity
 import java.util.Scanner;
 public class Manager {
 private MovieNode head;
+public MovieNode getHead() {
+	return head;
+}
 private Scanner in;
 private final int MATCH = 0;
 /*
@@ -118,37 +121,42 @@ private final int MATCH = 0;
 	public void add() {
 		//Uses makeMovie() function to make the movie
 	Movie newMovie = makeMovie();
-	MovieNode newNode = new MovieNode(newMovie,null);//Makes the node
-	
-	//Case one: This case is used when the item added is the first item
-	if (head == null) {
-		head = newNode;
-	} else {
+	addMovie(newMovie);
+	}
+
+
+	public void addMovie(Movie newMovie) {
+		MovieNode newNode = new MovieNode(newMovie,null);//Makes the node
+			
+		//Case one: This case is used when the item added is the first item
+		if (head == null) {
+			head = newNode;
+		} else {
 		//Makes the new node be put at the end of the list
-		MovieNode current = head;
-		MovieNode previous = null;
-		while (current != null) {
-			//Goes through the list till it finds the end
-			previous = current;
-			current = current.getNext();	
-		}
-		previous.setNext(newNode);//places node at the end
+			MovieNode current = head;
+			MovieNode previous = null;
+			while (current != null) {
+				//Goes through the list till it finds the end
+				previous = current;
+				current = current.getNext();	
+			}
+			previous.setNext(newNode);//places node at the end
+			}
 	}
-	}
+
 
 	/*
 	Function is designed to display the linked list in order
 	*/
 	public void display() {
-		
+	
+		System.out.print(generateLinkedListAsString());
+		/*
 	int index = 1;
 	MovieNode tempNode = head;
 	System.out.println("Now Displaying the movie Collection");
-	//System.out.println(head);
 	if (tempNode == null) {
-	System.out.println("List is null");
-	//temp = temp.getNext();
-	//count +=1;
+		System.out.println("List is null");
 	}
 	while (tempNode != null) {
 	System.out.println(tempNode);
@@ -159,8 +167,30 @@ private final int MATCH = 0;
 	String trash = in.nextLine();
 	index = 1;
 		}
+	 }
+	 */
 	}
+	
+	public String generateLinkedListAsString()
+	{
+		String displayString = new String();
+		int index = 1;
+		MovieNode tempNode = head;
+		//System.out.println("Now Displaying the movie Collection"); Lines that println are replace with the String + "\n"
+		displayString = displayString + "Now Displaying the movie Collection" + "\n";
+		if (tempNode == null) {
+			displayString = displayString + "List is null" + "\n";
+		}
+		while (tempNode != null) {
+			displayString = displayString + tempNode + "\n";
+			displayString = displayString + "******************************" + "\n";
+			tempNode = tempNode.getNext();
+		 }	
+		return displayString;
 	}
+	
+	
+	
 	/*
 	Function used to search the linked list for the desired item. Also will inform the user if such item does not
 	exist.
@@ -355,14 +385,14 @@ private final int MATCH = 0;
 	*/
 	
 	public void displayBackwards() {
-	if (head.getNext() == null) {
-	System.out.println("Null list, enter a movie(s) to display");
-	} else if (head.getNext() == null) {
-	System.out.println(head);//head will be printed last
-	}else {
-	displayBackWards(head);
-	System.out.println(head);
-	}
+		if (head.getNext() == null) {
+			System.out.println("Null list, enter a movie(s) to display");
+		} else if (head.getNext() == null) {
+			System.out.println(head);//head will be printed last
+		}else {
+			displayBackWards(head);
+			System.out.println(head);
+		}
 	}
 	/*
 	Uses recursion to display the list back wards
