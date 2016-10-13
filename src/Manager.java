@@ -150,44 +150,10 @@ private final int MATCH = 0;
 	*/
 	public void display() {
 	
-		System.out.print(generateLinkedListAsString());
-		/*
-	int index = 1;
-	MovieNode tempNode = head;
-	System.out.println("Now Displaying the movie Collection");
-	if (tempNode == null) {
-		System.out.println("List is null");
-	}
-	while (tempNode != null) {
-	System.out.println(tempNode);
-	System.out.println("******************************");
-	tempNode = tempNode.getNext();
-	index +=1;
-	if (index == 4) {
-	String trash = in.nextLine();
-	index = 1;
-		}
-	 }
-	 */
+		System.out.print(LinkedListDisplayHandler.generateLinkedListAsString(head));
 	}
 	
-	public String generateLinkedListAsString()
-	{
-		String displayString = new String();
-		int index = 1;
-		MovieNode tempNode = head;
-		//System.out.println("Now Displaying the movie Collection"); Lines that println are replace with the String + "\n"
-		displayString = displayString + "Now Displaying the movie Collection" + "\n";
-		if (tempNode == null) {
-			displayString = displayString + "List is null" + "\n";
-		}
-		while (tempNode != null) {
-			displayString = displayString + tempNode + "\n";
-			displayString = displayString + "******************************" + "\n";
-			tempNode = tempNode.getNext();
-		 }	
-		return displayString;
-	}
+
 	
 	
 	
@@ -360,22 +326,18 @@ private final int MATCH = 0;
 	
 	private boolean validGenre(String genre)
 	{
-		if (genre.compareToIgnoreCase("action") == MATCH) {
-			return true;
-			} else if (genre.compareToIgnoreCase("drama") == MATCH) {
-			return true;
-			} else if (genre.compareToIgnoreCase("science fiction") == MATCH) {
-			return true;
-			} else if (genre.compareToIgnoreCase("comedy") == MATCH) {
-			return true;
-			} else if (genre.compareToIgnoreCase("horror") == MATCH){
-			return true;
-			} else if (genre.compareToIgnoreCase("martial arts")==MATCH || genre.compareToIgnoreCase("Other")==MATCH) {
-				return true;	
+		
+		String[] genreList = new String[] { "action", "drama", "science fiction", 
+									"comedy", "horror", "martial arts", "Other"};
+		for (String genreItem:genreList)
+		{
+			if (genre.compareToIgnoreCase(genreItem) == MATCH)
+			{
+				return true;
 			}
-		else {
-			return false;
 		}
+		
+		return false;
 	}
 	
 	
@@ -385,6 +347,8 @@ private final int MATCH = 0;
 	*/
 	
 	public void displayBackwards() {
+		System.out.print(LinkedListDisplayHandler.generateStringOfLinkedListBackwards(head));
+		/*
 		if (head.getNext() == null) {
 			System.out.println("Null list, enter a movie(s) to display");
 		} else if (head.getNext() == null) {
@@ -393,7 +357,9 @@ private final int MATCH = 0;
 			displayBackWards(head);
 			System.out.println(head);
 		}
+		*/
 	}
+
 	/*
 	Uses recursion to display the list back wards
 	*/
