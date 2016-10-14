@@ -1,0 +1,198 @@
+commit 254c9a638eee82498abcc76b4730747e968386a2
+Author: Bernie Mayer <bemayer@ucalgary.ca>
+Date:   Thu Oct 13 14:27:34 2016 -0600
+
+    Refactoring #5 has now been completed, added a LinkedListDisplayHandler to make the string to display the linked list
+
+M	.gitignore
+A	Tests/LinkedListDisplayHandlerTest.java
+M	bin/Manager.class
+A	src/LinkedListDisplayHandler.java
+M	src/Manager.java
+A	tests/ManagerTest.java
+
+commit bfc43302cd05911aa5663b54c7dead975fc743be
+Author: Bernie Mayer <bemayer@ucalgary.ca>
+Date:   Wed Oct 12 17:21:23 2016 -0600
+
+    Refactoring #4 is now done, some work towards refactoring #5 has started
+
+M	Tests/ManagerTest.java
+M	bin/Manager.class
+M	src/Manager.java
+
+commit 95b631c3e28981cadd82a07cc79f6b76e21da5de
+Author: Bernie Mayer <bemayer@ucalgary.ca>
+Date:   Wed Oct 12 16:25:35 2016 -0600
+
+    Refactoring #3 is removing the User Interface class
+
+M	.metadata/.log
+M	.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+M	.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+M	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs
+M	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs
+M	.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+M	.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+M	.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+M	.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties
+M	.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml
+M	.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml
+M	.metadata/version.ini
+M	Tests/ManagerTest.java
+M	bin/Driver.class
+M	bin/Manager.class
+D	bin/UserInterface.class
+M	src/Driver.java
+M	src/Manager.java
+D	src/UserInterface.java
+
+commit c5df2656fb957ab2f001c97850ee876232f557d9
+Author: Bernie Mayer <bemayer@ucalgary.ca>
+Date:   Wed Oct 12 15:18:16 2016 -0600
+
+    Refactoring number #2 moved some of the code inside checkGenre to another method
+
+A	Tests/ManagerTest.java
+M	bin/Manager.class
+M	bin/Movie.class
+M	src/Manager.java
+M	src/Movie.java
+
+commit d5b827046e6dbc2039edcb4824e593963f67c028
+Author: Bernie Mayer <bemayer@ucalgary.ca>
+Date:   Wed Oct 12 14:09:57 2016 -0600
+
+    Refactor 1, moved some of the toString in the Movie class to another method
+
+M	bin/Movie.class
+M	src/Movie.java
+
+commit 49f4a249de4d14e54a7bef0c6e6e70ed046644fc
+Author: Bernie Mayer <bemayer@ucalgary.ca>
+Date:   Wed Oct 12 14:06:49 2016 -0600
+
+    Added a test file to the github
+
+M	.metadata/.log
+M	.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+D	.metadata/.plugins/org.eclipse.core.resources/.root/2.tree
+M	.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+M	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs
+M	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs
+M	.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+M	.metadata/version.ini
+A	Tests/MovieTest.java
+
+commit 360adba66599e5bb05ebd4c40a593cc42b37df90
+Author: Bernie Mayer <bemayer@ucalgary.ca>
+Date:   Tue Oct 11 22:04:28 2016 -0600
+
+    Added some tests to the code
+
+M	.classpath
+
+commit ac72b2df74621f82e7ad1a3fe8af736b71db1f96
+Merge: f03ab72 f9ad4b2
+Author: Bernie Mayer <bemayer@ucalgary.ca>
+Date:   Tue Oct 11 14:38:26 2016 -0600
+
+    Merge branch 'master' of https://github.com/BernieMayer/CPSC501_A1
+
+commit f03ab726977c95b10479268637934397a34dfba4
+Author: Bernie Mayer <bemayer@ucalgary.ca>
+Date:   Tue Oct 11 14:37:27 2016 -0600
+
+    Initial Commit
+
+A	.classpath
+A	.metadata/.lock
+A	.metadata/.log
+A	.metadata/.mylyn/repositories.xml.zip
+A	.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version
+A	.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+A	.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version
+A	.metadata/.plugins/org.eclipse.core.resources/.root/2.tree
+A	.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.epp.logging.aeri.ide.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jst.j2ee.webservice.ui.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.ui.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.team.ui.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs
+A	.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs
+A	.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fdt
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fdx
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.fnm
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.frq
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.nrm
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.tii
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/_0.tis
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/segments.gen
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/segments_1
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/local-history/write.lock
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.fdt
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.fdx
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.fnm
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.frq
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.nrm
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.tii
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/_0.tis
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/segments.gen
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/remote-history/segments_1
+A	.metadata/.plugins/org.eclipse.epp.logging.aeri.ide/org.eclipse.epp.logging.aeri.ide.server/server-config.json
+A	.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache
+A	.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+A	.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+A	.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+A	.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml
+A	.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml
+A	.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+A	.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.7.0.20160603-1933.xml
+A	.metadata/.plugins/org.eclipse.oomph.setup/workspace.setup
+A	.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties
+A	.metadata/.plugins/org.eclipse.rse.core/.log
+A	.metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark
+A	.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.zone49-ea_0/FP.local.files_0/node.properties
+A	.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.zone49-ea_0/H.local_16/node.properties
+A	.metadata/.plugins/org.eclipse.rse.core/profiles/PRF.zone49-ea_0/node.properties
+A	.metadata/.plugins/org.eclipse.rse.ui/.log
+A	.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml
+A	.metadata/.plugins/org.eclipse.ui.intro/introstate
+A	.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml
+A	.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml
+A	.metadata/version.ini
+A	.project
+A	.settings/org.eclipse.jdt.core.prefs
+A	RemoteSystemsTempFiles/.project
+A	bin/Debug.class
+A	bin/Driver.class
+A	bin/Manager.class
+A	bin/Movie.class
+A	bin/MovieNode.class
+A	bin/Test.class
+A	bin/UserInterface.class
+A	src/Debug.java
+A	src/Driver.java
+A	src/Manager.java
+A	src/Movie.java
+A	src/MovieNode.java
+A	src/Test.java
+A	src/UserInterface.java
+
+commit f9ad4b2747bd2ff38e4519360ae001fdd0626bc6
+Author: BernieMayer <berniemayer94@gmail.com>
+Date:   Tue Oct 11 14:28:57 2016 -0600
+
+    Initial commit
+
+A	.gitignore
